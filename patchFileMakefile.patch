@@ -1,0 +1,12 @@
+--- /home/kern/patched/linux-5.19.14/Makefile	2022-10-05 14:10:55.000000000 +0530
++++ /home/kern/build/linux-5.19.14/Makefile	2022-11-24 17:50:48.029925859 +0530
+@@ -1100,7 +1100,8 @@
+ export MODULES_NSDEPS := $(extmod_prefix)modules.nsdeps
+ 
+ ifeq ($(KBUILD_EXTMOD),)
+-core-y			+= kernel/ certs/ mm/ fs/ ipc/ security/ crypto/
++
++core-y			+= kernel/ certs/ mm/ fs/ ipc/ security/ crypto/ TwoD_syscall/
+ core-$(CONFIG_BLOCK)	+= block/
+ core-$(CONFIG_IO_URING)	+= io_uring/
+ 

@@ -1,0 +1,68 @@
+Only in /home/kern/build/linux-5.19.14/: ..vmlinux.export.o.cmd
+Only in /home/kern/build/linux-5.19.14/: .Module.symvers.cmd
+Only in /home/kern/build/linux-5.19.14/: .config
+Only in /home/kern/build/linux-5.19.14/: .config.old
+Only in /home/kern/build/linux-5.19.14/: .missing-syscalls.d
+Only in /home/kern/build/linux-5.19.14/: .modules-only.symvers.cmd
+Only in /home/kern/build/linux-5.19.14/: .modules.order.cmd
+Only in /home/kern/build/linux-5.19.14/: .tmp_System.map
+Only in /home/kern/build/linux-5.19.14/: .tmp_vmlinux.kallsyms1
+Only in /home/kern/build/linux-5.19.14/: .tmp_vmlinux.kallsyms1.S
+Only in /home/kern/build/linux-5.19.14/: .tmp_vmlinux.kallsyms1.o
+Only in /home/kern/build/linux-5.19.14/: .tmp_vmlinux.kallsyms2
+Only in /home/kern/build/linux-5.19.14/: .tmp_vmlinux.kallsyms2.S
+Only in /home/kern/build/linux-5.19.14/: .tmp_vmlinux.kallsyms2.o
+Only in /home/kern/build/linux-5.19.14/: .version
+Only in /home/kern/build/linux-5.19.14/: .vmlinux.cmd
+Only in /home/kern/build/linux-5.19.14/: .vmlinux.export.c
+Only in /home/kern/build/linux-5.19.14/: .vmlinux.export.o
+Only in /home/kern/build/linux-5.19.14/: .vmlinux.o.cmd
+Only in /home/kern/build/linux-5.19.14/: .vmlinux.objs
+Common subdirectories: /home/kern/patched/linux-5.19.14/Documentation and /home/kern/build/linux-5.19.14/Documentation
+Common subdirectories: /home/kern/patched/linux-5.19.14/LICENSES and /home/kern/build/linux-5.19.14/LICENSES
+diff -u /home/kern/patched/linux-5.19.14/Makefile /home/kern/build/linux-5.19.14/Makefile
+--- /home/kern/patched/linux-5.19.14/Makefile	2022-10-05 14:10:55.000000000 +0530
++++ /home/kern/build/linux-5.19.14/Makefile	2022-11-24 17:50:48.029925859 +0530
+@@ -1100,7 +1100,8 @@
+ export MODULES_NSDEPS := $(extmod_prefix)modules.nsdeps
+ 
+ ifeq ($(KBUILD_EXTMOD),)
+-core-y			+= kernel/ certs/ mm/ fs/ ipc/ security/ crypto/
++
++core-y			+= kernel/ certs/ mm/ fs/ ipc/ security/ crypto/ TwoD_syscall/
+ core-$(CONFIG_BLOCK)	+= block/
+ core-$(CONFIG_IO_URING)	+= io_uring/
+ 
+Only in /home/kern/build/linux-5.19.14/: Module.symvers
+Only in /home/kern/build/linux-5.19.14/: OneD_syscall
+Only in /home/kern/build/linux-5.19.14/: System.map
+Only in /home/kern/build/linux-5.19.14/: System.map-5.19.14
+Only in /home/kern/build/linux-5.19.14/: TwoD_syscall
+Common subdirectories: /home/kern/patched/linux-5.19.14/arch and /home/kern/build/linux-5.19.14/arch
+Common subdirectories: /home/kern/patched/linux-5.19.14/block and /home/kern/build/linux-5.19.14/block
+Common subdirectories: /home/kern/patched/linux-5.19.14/certs and /home/kern/build/linux-5.19.14/certs
+Common subdirectories: /home/kern/patched/linux-5.19.14/crypto and /home/kern/build/linux-5.19.14/crypto
+Common subdirectories: /home/kern/patched/linux-5.19.14/drivers and /home/kern/build/linux-5.19.14/drivers
+Common subdirectories: /home/kern/patched/linux-5.19.14/fs and /home/kern/build/linux-5.19.14/fs
+Common subdirectories: /home/kern/patched/linux-5.19.14/include and /home/kern/build/linux-5.19.14/include
+Common subdirectories: /home/kern/patched/linux-5.19.14/init and /home/kern/build/linux-5.19.14/init
+Common subdirectories: /home/kern/patched/linux-5.19.14/io_uring and /home/kern/build/linux-5.19.14/io_uring
+Common subdirectories: /home/kern/patched/linux-5.19.14/ipc and /home/kern/build/linux-5.19.14/ipc
+Common subdirectories: /home/kern/patched/linux-5.19.14/kernel and /home/kern/build/linux-5.19.14/kernel
+Common subdirectories: /home/kern/patched/linux-5.19.14/lib and /home/kern/build/linux-5.19.14/lib
+Common subdirectories: /home/kern/patched/linux-5.19.14/mm and /home/kern/build/linux-5.19.14/mm
+Only in /home/kern/build/linux-5.19.14/: modules-only.symvers
+Only in /home/kern/build/linux-5.19.14/: modules.builtin
+Only in /home/kern/build/linux-5.19.14/: modules.builtin.modinfo
+Only in /home/kern/build/linux-5.19.14/: modules.order
+Common subdirectories: /home/kern/patched/linux-5.19.14/net and /home/kern/build/linux-5.19.14/net
+Common subdirectories: /home/kern/patched/linux-5.19.14/samples and /home/kern/build/linux-5.19.14/samples
+Common subdirectories: /home/kern/patched/linux-5.19.14/scripts and /home/kern/build/linux-5.19.14/scripts
+Common subdirectories: /home/kern/patched/linux-5.19.14/security and /home/kern/build/linux-5.19.14/security
+Common subdirectories: /home/kern/patched/linux-5.19.14/sound and /home/kern/build/linux-5.19.14/sound
+Common subdirectories: /home/kern/patched/linux-5.19.14/tools and /home/kern/build/linux-5.19.14/tools
+Common subdirectories: /home/kern/patched/linux-5.19.14/usr and /home/kern/build/linux-5.19.14/usr
+Common subdirectories: /home/kern/patched/linux-5.19.14/virt and /home/kern/build/linux-5.19.14/virt
+Only in /home/kern/build/linux-5.19.14/: vmlinux
+Only in /home/kern/build/linux-5.19.14/: vmlinux.o
+Only in /home/kern/build/linux-5.19.14/: vmlinux.symvers

@@ -1,0 +1,11 @@
+--- /home/kern/patched/linux-5.19.14/arch/x86/entry/syscalls/syscall_64.tbl	2022-10-05 14:10:55.000000000 +0530
++++ /home/kern/build/linux-5.19.14/arch/x86/entry/syscalls/syscall_64.tbl	2022-11-24 17:23:23.629963308 +0530
+@@ -372,6 +372,8 @@
+ 448	common	process_mrelease	sys_process_mrelease
+ 449	common	futex_waitv		sys_futex_waitv
+ 450	common	set_mempolicy_home_node	sys_set_mempolicy_home_node
++451	common	hello_system_call	sys_hello
++452     common  TwoD_system_call	sys_twodcopy
+ 
+ #
+ # Due to a historical design error, certain syscalls are numbered differently
